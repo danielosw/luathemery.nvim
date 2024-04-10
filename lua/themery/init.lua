@@ -1,7 +1,6 @@
 local controller = require("themery.controller")
 local window = require("themery.window")
 local config = require("themery.config")
-local constants = require("themery.constants")
 local api = vim.api
 
 local function setMappings()

@@ -19,8 +19,8 @@ end
 
 local function openWindow()
   buf = api.nvim_create_buf(false, true)
-  vim.api.nvim_buf_set_option(buf, 'filetype', 'themery')
-  api.nvim_buf_set_option(buf, 'bufhidden', 'wipe')
+  vim.api.nvim_set_option_value("filetype", "themery", {buf = buf})
+  api.nvim_set_option_value('bufhidden', 'wipe', {buf = buf})
 
   local winTransform = getWinTransform()
 
@@ -35,7 +35,7 @@ local function openWindow()
   }
 
   win = api.nvim_open_win(buf, true, opts)
-  vim.api.nvim_win_set_option(win, 'cursorline', true)
+  vim.api.nvim_set_option_value('cursorline', true, {win = win})
 
   local title = utils.centerHorizontal(constants.TITLE)
   api.nvim_buf_set_lines(buf, 0, -1, false, { title })

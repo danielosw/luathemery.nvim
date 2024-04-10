@@ -65,7 +65,7 @@ end
 local function updateView(direction)
 	local themeList = config.getSettings().themes
 	position = position + direction
-	vim.api.nvim_buf_set_option(window.getBuf(), "modifiable", true)
+	vim.api.nvim_set_option_value("modifiable", true, {scope = 'local', win = 0})
 
 	-- cycle to the last result if cursor is at the top of the results list and moved up
 	if position < resultsStart then
@@ -79,7 +79,7 @@ local function updateView(direction)
 
 	if #themeList == 0 then
 		window.printNoThemesLoaded()
-		vim.api.nvim_buf_set_option(window.getBuf(), "modifiable", false)
+		vim.api.nvim_set_option_value("modifiable", false, {scope = 'local', win = 0})
 		return
 	end
 
@@ -101,7 +101,8 @@ local function updateView(direction)
 		setColorscheme(themeList[position - 1])
 	end
 
-	vim.api.nvim_buf_set_option(window.getBuf(), "modifiable", false)
+	vim.api.nvim_set_option_value("modifiable", false, {scope = 'local', win = 0})
+	
 end
 
 local function revertTheme()
