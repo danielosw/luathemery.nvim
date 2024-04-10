@@ -1,3 +1,7 @@
+Fork of themery that just makes its themery.vim file into themery.lua  
+Original readme:  
+***
+
 <p align="center">
 <img src="docs/title-logo.svg" width="420">
 </p>
