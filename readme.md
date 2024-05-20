@@ -65,6 +65,7 @@ use 'danielosw/luathemery.nvim'
 ```
 { 'danielosw/luathemery.nvim' }
 ```
+When using Lazy, make sure that any themes are loaded being activated.
 ## Configuration
 
 Configuration is simple and intuitive. It consists of 2 steps which are described below:
