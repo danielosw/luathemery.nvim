@@ -1,4 +1,4 @@
-Fork of themery that just makes its themery.vim file into themery.lua  
+Fork of themery that just makes the themery.vim file into themery.lua and removes deprecated functions.
 Original readme:  
 ***
 
