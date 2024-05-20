@@ -53,15 +53,18 @@ Choose one of these options and continue with "Configuration".
 ### vim-plug
 
 ```
-Plug 'zaldih/themery.nvim'
+Plug 'danielosw/luathemery.nvim'
 ```
 
 ### Packer
 
 ```
-use 'zaldih/themery.nvim'
+use 'danielosw/luathemery.nvim'
 ```
-
+### Lazy
+```
+{ 'danielosw/luathemery.nvim' }
+```
 ## Configuration
 
 Configuration is simple and intuitive. It consists of 2 steps which are described below:
